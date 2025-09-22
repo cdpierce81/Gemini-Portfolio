@@ -72,13 +72,24 @@ const menuContent = document.querySelector('.site-header__menu-content');
 const siteHeader = document.querySelector('.site-header');
 
 if (menuIcon && menuContent && siteHeader) {
-    menuIcon.addEventListener('click', function() {
-        menuContent.classList.toggle('site-header__menu-content--is-visible');
-        siteHeader.classList.toggle('site-header--is-expanded');
-        menuIcon.classList.toggle('site-header__menu-icon--close-x');
+    // Add event listeners for both 'click' and 'touchstart' for better mobile compatibility
+    menuIcon.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents a potential double-toggle on some devices
+        toggleMenu();
+    });
+
+    menuIcon.addEventListener('touchstart', function(event) {
+        event.preventDefault(); // Prevents the 'click' event from firing as well
+        toggleMenu();
     });
 } else {
     console.warn("Mobile menu elements not found. Ensure .site-header__menu-icon, .site-header__menu-content, and .site-header exist.");
+}
+
+function toggleMenu() {
+    menuContent.classList.toggle('site-header__menu-content--is-visible');
+    siteHeader.classList.toggle('site-header--is-expanded');
+    menuIcon.classList.toggle('site-header__menu-icon--close-x');
 }
 
 // --- Contact Modal Logic ---
