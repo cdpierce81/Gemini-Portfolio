@@ -148,6 +148,43 @@ h2 { /* Global H2 style, can be overridden */
 	}
 }
 
+/* Mobile Menu */
+@media (max-width: 800px) {
+    .site-header__menu-content {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
+    }
+
+    .site-header__menu-content--is-visible {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .94);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+}
+
+.modal--is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
 /* Wrapper for consistent content width */
 .wrapper {
 	overflow: hidden; /* Contains floats */
