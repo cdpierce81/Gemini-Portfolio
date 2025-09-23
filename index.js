@@ -74,7 +74,7 @@ const siteHeader = document.querySelector('.site-header');
 if (menuIcon && menuContent && siteHeader) {
     // Add event listeners for both 'click' and 'touchstart' for better mobile compatibility
     menuIcon.addEventListener('click', function() {
-        menuContent.classList.toggle('site-header__menu-content--is visible);
+        menuContent.classList.toggle('site-header__menu-content--is-visible);
         siteHeader.classList.toggle('site-header--is-expanded');
         menuIcon.classList.toggle('site-header__menu-icon--close-x');
     });
