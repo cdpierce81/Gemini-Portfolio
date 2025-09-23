@@ -82,12 +82,6 @@ if (menuIcon && menuContent && siteHeader) {
     console.warn("Mobile menu elements not found. Ensure .site-header__menu-icon, .site-header__menu-content, and .site-header exist.");
 }
 
-function toggleMenu() {
-    menuContent.classList.toggle('site-header__menu-content--is-visible');
-    siteHeader.classList.toggle('site-header--is-expanded');
-    menuIcon.classList.toggle('site-header__menu-icon--close-x');
-}
-
 // --- Contact Modal Logic ---
 const openModalButtons = document.querySelectorAll('.open-modal');
 const closeModalButton = document.querySelector('.modal__close'); // Assuming you add a close button with this class
