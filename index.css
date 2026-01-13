@@ -439,8 +439,8 @@ h2 { /* Global H2 style, can be overridden */
 
 
 
-/* About Me Image (ketty-img from test.css) */
-.ketty-img {
+/* About Me Image (dani-img from test.css) */
+.dani-img {
 	border-radius: 50%; /* Circular image */
 	max-width: 100%;
 	height: auto;
@@ -853,7 +853,7 @@ h2 { /* Global H2 style, can be overridden */
 		font-size: 1em;
 	}
 
-	.ketty-img {
+	.dani-img {
 		max-width: 100%; /* Allow image to fill width */
 		margin: 20px auto; /* Center image */
 	}
@@ -940,7 +940,7 @@ h2 { /* Global H2 style, can be overridden */
     }
 
     /* Adjustments for the circular profile image on smaller screens */
-    .ketty-img {
+    .dani-img {
         float: none; /* Crucial: Disable the float on mobile */
         shape-outside: none; /* Crucial: Disable shape-outside on mobile */
         
