@@ -120,3 +120,26 @@ if (openModalButtons.length > 0 && modal) {
 } else {
     console.warn("Modal elements not found. Ensure .open-modal buttons and .modal exist.");
 }
+/*
+// --- Dark Mode Logic ---
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+// Check for saved user preference on page load
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        // Switch between 'light' and 'dark'
+        let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        
+        // Apply the theme to the HTML element
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        // Save the preference so it persists on refresh
+        localStorage.setItem('theme', theme);
+    });
+}
+*/
